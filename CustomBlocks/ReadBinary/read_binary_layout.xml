@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<block xmlns="http://schemas.android.com/tools/block" id="123456789" type="custom">
+    <data>
+        <blocktype>
+            <name>ReadBinary</name>
+            <version>1</version>
+        </blocktype>
+        <blockname>
+            <name>Read Binary</name>
+        </blockname>
+        <color>
+            <hue>260</hue>
+            <saturation>0.5</saturation>
+            <lightness>0.5</lightness>
+        </color>
+        <libraryconfig>
+            <libraryname>BinaryFileLibrary</libraryname>
+            <author>Your Name</author>
+        </libraryconfig>
+        <categories>
+            <category>Custom</category>
+        </categories>
+        <blockdesc>
+            <desc>The ReadBinary block reads binary data from a specified file.</desc>
+        </blockdesc>
+        <inputs>
+            <input>
+                <type>text</type>
+                <name>File Location</name>
+                <label>File Location</label>
+            </input>
+        </inputs>
+        <outputs>
+            <output>
+                <type>text</type>
+                <name>Content Read</name>
+                <label>Content Read</label>
+            </output>
+        </outputs>
+    </data>
+</block>
