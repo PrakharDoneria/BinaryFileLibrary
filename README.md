@@ -1,0 +1,2 @@
+# BinaryFileLibrary
+Binary File handling
