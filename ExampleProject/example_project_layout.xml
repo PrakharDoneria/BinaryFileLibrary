@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://schemas.android.com/tools/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.android.com/tools/project http://schemas.android.com/tools/project.xsd">
+    <block-file>
+        <path>/storage/emulated/0/MyExampleProject/blockfile.blk</path>
+        <version>13</version>
+    </block-file>
+    <components>
+        <!-- Placeholder for components -->
+        <component type="button" name="Button" id="1">
+            <events>
+                <event type="click" />
+            </events>
+        </component>
+    </components>
+    <variables>
+        <!-- Placeholder for variables -->
+        <variable name="Counter" type="int" />
+    </variables>
+    <variables_events>
+        <!-- Placeholder for variable events -->
+        <event variable="Counter" type="changed" />
+    </variables_events>
+    <init>
+        <!-- Initialization logic -->
+        <block type="variables_set">
+            <field name="VAR">Counter</field>
+            <value>
+                <block type="math_number">
+                    <field name="NUM">0</field>
+                </block>
+            </value>
+        </block>
+    </init>
+    <events>
+        <!-- Event handling logic -->
+        <event type="click">
+            <block type="controls_repeat">
+                <field name="TIMES">5</field>
+                <statement>
+                    <block type="math_change">
+                        <field name="VAR">Counter</field>
+                        <value>
+                            <block type="math_number">
+                                <field name="NUM">1</field>
+                            </block>
+                        </value>
+                    </block>
+                </statement>
+            </block>
+        </event>
+        <event variable="Counter" type="changed">
+            <block type="controls_if">
+                <value name="IF0">
+                    <block type="logic_compare">
+                        <field name="OP">GT</field>
+                        <value>
+                            <block type="variables_get">
+                                <field name="VAR">Counter</field>
+                            </block>
+                        </value>
+                        <value>
+                            <block type="math_number">
+                                <field name="NUM">3</field>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+                <statement name="DO0">
+                    <block type="controls_if">
+                        <value name="IF0">
+                            <block type="logic_compare">
+                                <field name="OP">LT</field>
+                                <value>
+                                    <block type="variables_get">
+                                        <field name="VAR">Counter</field>
+                                    </block>
+                                </value>
+                                <value>
+                                    <block type="math_number">
+                                        <field name="NUM">5</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                        <statement name="DO0">
+                            <!-- Example ReadBinary block -->
+                            <block type="custom" id="111111111">
+                                <input name="File Location" label="file_path.txt" type="text" />
+                            </block>
+                        </statement>
+                        <statement name="ELSE0">
+                            <!-- Example WriteBinary block -->
+                            <block type="custom" id="222222222">
+                                <input name="Data to Write" label="Hello, Binary World!" type="text" />
+                                <input name="File Location" label="output.txt" type="text" />
+                            </block>
+                        </statement>
+                    </block>
+                </statement>
+            </block>
+        </event>
+    </events>
+    <main>
+        <!-- Main block sequence -->
+        <!-- Example AppendBinary block -->
+        <block type="custom" id="333333333">
+            <input name="Data to Append" label="Appending more data." type="text" />
+            <input name="File Location" label="output.txt" type="text" />
+        </block>
+        
+    </main>
+</project>
