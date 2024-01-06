@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<block xmlns="http://schemas.android.com/tools/block" id="987654321" type="custom">
+    <data>
+        <blocktype>
+            <name>WriteBinary</name>
+            <version>1</version>
+        </blocktype>
+        <blockname>
+            <name>Write Binary</name>
+        </blockname>
+        <color>
+            <hue>120</hue>
+            <saturation>0.5</saturation>
+            <lightness>0.5</lightness>
+        </color>
+        <libraryconfig>
+            <libraryname>BinaryFileLibrary</libraryname>
+            <author>Your Name</author>
+        </libraryconfig>
+        <categories>
+            <category>Custom</category>
+        </categories>
+        <blockdesc>
+            <desc>The WriteBinary block writes binary data to a specified file.</desc>
+        </blockdesc>
+        <inputs>
+            <input>
+                <type>text</type>
+                <name>Data to Write</name>
+                <label>Data to Write</label>
+            </input>
+            <input>
+                <type>text</type>
+                <name>File Location</name>
+                <label>File Location</label>
+            </input>
+        </inputs>
+        <outputs>
+            <output>
+                <type>boolean</type>
+                <name>Write Success</name>
+                <label>Write Success</label>
+            </output>
+        </outputs>
+    </data>
+</block>
